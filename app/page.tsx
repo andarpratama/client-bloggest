@@ -7,6 +7,7 @@ import { useEffect, useState } from 'react'
 import makeRequest from './utils/api'
 import Banner from './components/Banner'
 import Footer from './components/Footer'
+import Image from 'next/image';
 
 const Home = () => {
   const [data, setData] = useState(null)
@@ -38,11 +39,13 @@ const Home = () => {
               key={post.id}
               className="bg-white p-2 pb-4 rounded shadow hover:shadow-teal-800 dark:shadow-teal-50 duration-300 mb-10"
             >
-              <img
-                src={post.image}
-                alt={post.title}
-                className="w-full h-32 object-cover mb-2 rounded"
-              />
+              <Image
+                        src={post.image}
+                        alt={post.title}
+                        width={320}  // specify the width of your image
+                        height={213}  // specify the height of your image
+                        className="h-32 object-cover mb-2 rounded"
+                    />
               <div className="mb-2 flex justify-between">
                 <span className="bg-teal-200 hover:bg-teal-300 px-1 py-0.5 text-teal-600 text-xs cursor-pointer">
                   Javascript
