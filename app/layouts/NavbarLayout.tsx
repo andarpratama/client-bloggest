@@ -11,7 +11,7 @@ interface LayoutProps {
   children: ReactNode;
 }
 
-const Layout: React.FC<LayoutProps> = ({ children }) => {
+const NavbarLayout: React.FC<LayoutProps> = ({ children }) => {
   const theme = useSelector((state: any) => state.theme.value);
   const dispatch = useDispatch();
 
@@ -68,4 +68,4 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   );
 };
 
-export default Layout;
+export default NavbarLayout;

@@ -1,7 +1,7 @@
 // pages/index.tsx or pages/home.tsx
 'use client'
 import Link from 'next/link'
-import Layout from './layouts/layout'
+import NavbarLayout from './layouts/NavbarLayout'
 import { blogPosts } from './constans/blogPosts'
 import { useEffect, useState } from 'react'
 import makeRequest from './utils/api'
@@ -26,7 +26,7 @@ const Home = () => {
   }, [])
 
   return (
-    <Layout>
+    <NavbarLayout>
       <Banner />
       <div className="container mx-auto py-10 mt-8">
         <div className='mb-6' >
@@ -65,7 +65,7 @@ const Home = () => {
         </div>
       </div>
       <Footer />
-    </Layout>
+    </NavbarLayout>
   )
 }
 
