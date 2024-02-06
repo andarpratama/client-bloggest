@@ -12,7 +12,7 @@ interface LayoutProps {
 }
 
 const NavbarLayout: React.FC<LayoutProps> = ({ children }) => {
-  const theme = useSelector((state: any) => state.theme.value);
+  const theme = useSelector((state: RootState) => state.theme.value);
   const dispatch = useDispatch();
 
   const handleChangeTheme = () => {
